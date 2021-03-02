@@ -213,6 +213,39 @@
             })
         });
 
+        //Payment Change modal alert
+        $('#payment-alert').click(function () {
+            swal.setDefaults({
+                input: 'text',
+                confirmButtonText: 'Next &rarr;',
+                showCancelButton: true,
+                animation: false,
+                progressSteps: ['1', '2', '3']
+            })
+
+            var steps = [
+                {
+                    title: 'Name On Card',
+                    text: 'Enter your first and last name'
+                },
+                'Question 2',
+                'Question 3'
+            ]
+
+            swal.queue(steps).then(function (result) {
+                swal.resetDefaults()
+                swal({
+                    title: 'All done!',
+                    html: 'Your answers: <pre>' +
+                    JSON.stringify(result) +
+                    '</pre>',
+                    confirmButtonText: 'Lovely!',
+                    showCancelButton: false
+                })
+            }, function () {
+                swal.resetDefaults()
+            })
+        });
         //Danger
         $('#dynamic-alert').click(function () {
             swal.queue([{

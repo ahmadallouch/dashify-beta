@@ -1300,10 +1300,21 @@ dt {
 /******* Footer *******/
 .footer {
   bottom: 0;
-  text-align: center !important;
+  text-align: left !important;
   padding: 19px 30px 20px;
   position: absolute;
-  background-color: #ffffff;
+  background-color: #f3f6fb;
+  right: 0;
+  left: 240px;
+  font-family: "Roboto", sans-serif;
+}
+
+.legal-footer {
+  bottom: 0;
+  text-align: right !important;
+  padding: 19px 30px 20px;
+  position: absolute;
+  background-color: #f3f6fb;
   right: 0;
   left: 240px;
   font-family: "Roboto", sans-serif;
